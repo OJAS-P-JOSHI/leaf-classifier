@@ -98,7 +98,7 @@ st.sidebar.title('Navigator')
 navigation = st.sidebar.selectbox('', ('Home', 'Leaf Disease Classifier'))
 
 if navigation == 'Home':
-    st.image(r'templete\leaf.png', use_column_width=True)
+    st.image('templete\leaf.png', use_column_width=True)
     st.write('Welcome to the Leaf Disease Classifier website! This website helps you classify leaf diseases of both potatoes and mangoes. Select the "Leaf Disease Classifier" option from the sidebar to start classifying images of potato or mango leaves.')
 
     # Display the User Guide video
@@ -132,6 +132,6 @@ else:
     option = st.selectbox('Select Leaf Type for Classification', ('Potato', 'Mango'))
 
     if option == 'Potato':
-        load_and_predict(r'model\Potato.h5', potato_class_indices, 'Potato Leaf Disease Classifier')
+        load_and_predict('model\Potato.h5', potato_class_indices, 'Potato Leaf Disease Classifier')
     elif option == 'Mango':
-        load_and_predict(r'model\Mango.h5', mango_class_indices, 'Mango Leaf Disease Classifier')
+        load_and_predict('model\Mango.h5', mango_class_indices, 'Mango Leaf Disease Classifier')
