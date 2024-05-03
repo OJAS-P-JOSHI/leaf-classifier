@@ -5,6 +5,19 @@ from PIL import Image
 from keras.models import load_model
 import time
 
+def hide_github_icon():
+  """Hides the entire Streamlit main menu including the GitHub icon."""
+  style = """
+  MainMenu {
+    display: none;
+  }
+  """
+  st.set_page_config(page_title=None, layout="wide", initial_sidebar_state="collapsed", menu_items={})
+  st.write('<style>'+ style +'</style>', unsafe_allow_html=True)
+
+# Call the function to hide the menu
+hide_github_icon()
+
 # Function to load and predict using a model
 def load_and_predict(model_path, class_indices, title):
     # Load the trained model
