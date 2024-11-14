@@ -111,7 +111,7 @@ st.sidebar.title('Navigator')
 navigation = st.sidebar.selectbox('', ('Home', 'Leaf Disease Classifier'))
 
 if navigation == 'Home':
-    st.image('leaf.png', use_column_width=True)
+    st.image('leaf.png', use_container_width=True)
     st.write('Welcome to the Leaf Disease Classifier website! This website helps you classify leaf diseases of both potatoes and mangoes. Select the "Leaf Disease Classifier" option from the sidebar to start classifying images of potato or mango leaves.')
 
     # Display the User Guide video
